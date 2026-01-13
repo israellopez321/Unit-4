@@ -6,3 +6,6 @@ public class Rectangulo {
 	int y1;
 	int y2;
 }
+
+
+
