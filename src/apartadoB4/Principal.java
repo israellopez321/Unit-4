@@ -6,21 +6,23 @@ public static void main(String[] args) {
 		
 		//Declaramos el artículo 1 
 		Articulo articulo1 = new Articulo("Pijama", 10, 0.21, 12);
+		Articulo articulo2 = new Articulo("", -20, 210, -5);
 		
-		//Calculamos su precio total 
-		double precioNeto = articulo1.precioBruto + (articulo1.precioBruto * articulo1.iva);
-		
-		//Mostramos el resultado
-		System.out.println("Pijama -- Precio: " + articulo1.precioBruto + "€ - IVA: " + articulo1.iva + " - PVP: " + precioNeto + "€");
-		
-		articulo1.precioBruto = 17;
-		
-		//Calculamos su precio total 
-		precioNeto = articulo1.precioBruto + (articulo1.precioBruto * articulo1.iva);
-		
-		//Mostramos el resultado
-		System.out.println("Pijama -- Precio: " + articulo1.precioBruto + "€ - IVA: " + articulo1.iva + " - PVP: " + precioNeto + "€");
+		mostrar(articulo1);
+		mostrar(articulo2);
 		
 		
+	}
+	/**
+	 * 
+	 * @param articulo
+	 */
+	static void mostrar(Articulo articulo) {
+		
+		double precioNeto = articulo.precioBruto + (articulo.precioBruto * articulo.iva);
+		
+		System.out.println("--------------------------------------------------------------------------------");
+		System.out.println(articulo.nombre + " | Precio : " + articulo.precioBruto + "€ | IVA: " + articulo.iva + "% | PVP: " + precioNeto + "€ | Stock: " + articulo.stock);
+		System.out.println("--------------------------------------------------------------------------------");
 	}
 }
