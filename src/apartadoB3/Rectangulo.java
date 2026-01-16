@@ -13,4 +13,5 @@ public class Rectangulo {
 		this.y2 = y2;
 		
 	}
+	
 }

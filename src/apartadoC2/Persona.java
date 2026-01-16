@@ -13,7 +13,7 @@ public class Persona {
 	}
 
 	public void setDni(String dni) {
-		if (dni != null || dni.length() != 9) {
+		if (dni != null || dni.length() == 9) {
 			this.dni = dni;
 		}
 
