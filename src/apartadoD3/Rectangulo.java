@@ -68,7 +68,11 @@ public class Rectangulo {
 	}
 	
 	public String toString() {
+		String mostrar;
 		
+		mostrar = "Datos: X1 = " + this.x1 + " X2 = " + this.x2 + " Y1 = " + this.y1 + " Y2 = " + this.y2;
+		
+		return mostrar;
 	}
 	
 	//Setting y getting

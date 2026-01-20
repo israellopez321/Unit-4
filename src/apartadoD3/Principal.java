@@ -17,6 +17,19 @@ public class Principal {
 		
 		mostrar(rectangulo1);
 		
+		rectangulo1.setAll(2, 5, 3, 7);
+		
+		mostrar(rectangulo1);
+		
+		double perimetro = rectangulo1.getPerimetro();
+		
+		double area = rectangulo1.getArea();
+		
+		System.out.println("Perimetro = " + perimetro + " Area = " + area);
+		
+		String datos = rectangulo1.toString();
+		
+		System.out.println(datos);
 	}
 	/**
 	 * 
