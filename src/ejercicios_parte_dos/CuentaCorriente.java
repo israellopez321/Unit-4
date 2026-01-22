@@ -39,7 +39,7 @@ public class CuentaCorriente {
 	public boolean sacarDinero(double dineroSacado) {
 		boolean esPosible = false;
 		
-		if (dineroSacado < this.saldo) {
+		if (dineroSacado <= this.saldo) {
 			esPosible = true;
 			this.saldo -= dineroSacado;
 		}	
