@@ -14,7 +14,74 @@ public class Fecha {
 		this.ano = ano;
 	}
 	
+	/**
+	 * Funcion para saber si un año es bisiesto
+	 * @return true si es bisiesto
+	 */
+	public boolean esBisiesto() {
+		
+		boolean esBisiesto = false;
+		
+		if (this.ano % 4 == 0 ) {
+			
+			esBisiesto = true;
+			
+		}
+		
+		return esBisiesto;
+	}
+	/**
+	 * Funcion para saber si la fecha es correcta
+	 * @return la fecha es correcta?
+	 */
+	public boolean fechaCorrecta() {
+		
+		boolean esCorrecto = false;
+		
+		if (this.mes == 2 && this.dia <= 28 || this.mes == 2 && esBisiesto() && this.dia <= 29) {
+			
+			esCorrecto = true;
+		} else if (this.mes%2 == 1 && this.dia <= 30) {
+			
+			esCorrecto = true;
+		} else if (this.mes%2 == 0 && this.dia <= 31) {
+			
+			esCorrecto = true;
+		}
+		
+		return esCorrecto;
+	}
 	
+	public void diaSiguiente() {
+	    dia++;
+
+	    if (mes == 2) {
+	        // Febrero
+	        if ((esBisiesto() && dia > 29) || (!esBisiesto() && dia > 28)) {
+	            dia = 1;
+	            mes++;
+	        }
+	    } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+	        // Meses de 30 días
+	        if (dia > 30) {
+	            dia = 1;
+	            mes++;
+	        }
+	    } else {
+	        // Meses de 31 días
+	        if (dia > 31) {
+	            dia = 1;
+	            if (mes == 12) {
+	                mes = 1;
+	                ano++;
+	            } else {
+	                mes++;
+	            }
+	        }
+	    }
+	}
+	
+	public 
 	
 	//Getter y setter
 	public int getDia() {
