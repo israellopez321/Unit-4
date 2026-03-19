@@ -33,7 +33,7 @@ public class Libro {
 		this.stock = stock;
 		this.autor = autor;
 		this.genero = genero;
-		this.estado = disponible;
+		
 	}
 
 	
